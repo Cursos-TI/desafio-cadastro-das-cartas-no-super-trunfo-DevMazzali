@@ -20,7 +20,7 @@ int main() {
     char NomeDaCidade[50], NomeDaCidade2[50];
     int Populacao, Populacao2;
     float Area, Area2;
-    float pib, pib2;
+    double pib, pib2;
     int pontosTuristicos, pontosTuristicos2;
 
     // Leitura dos dados da carta 1
@@ -47,7 +47,7 @@ int main() {
     while(getchar() != '\n');
 
     printf("Digite o PIB:\n");
-    scanf("%f", &pib);
+    scanf("%lf", &pib);
     while(getchar() != '\n');
     
     printf("Digite a quantidade de pontos turisticos:\n");
@@ -56,13 +56,13 @@ int main() {
     
         // Impressão dos dados da carta 1
 
-    printf("Carta de numero 1:\n");
+    printf("Carta 1:\n");
     printf("Estado: %c\n", Estado);
     printf("Codigo da carta: %c%s\n", Estado, CodigoCarta);
     printf("Nome da cidade: %s\n", NomeDaCidade);
     printf("Populacao: %d\n", Populacao);
     printf("Area: %.2f Km/u00B2\n", Area);
-    printf("PIB: %.2f Bilhoes de reais\n", pib);
+    printf("PIB: %.2lf Bilhoes de reais\n", pib);
     printf("Pontos turisticos: %d\n", pontosTuristicos);
     
     // Leitura dos dados da carta 2
@@ -85,7 +85,7 @@ int main() {
     while(getchar() != '\n');
     
     printf("Digite a Area em Km2:\n");
-    scanf("%f", &Area2);
+    scanf("%lf", &Area2);
     while(getchar() != '\n');
     
     printf("Digite o PIB:\n");
@@ -98,13 +98,13 @@ int main() {
     
     // Impressão dos dados da carta 2
 
-    printf("Cartade numero 2:\n");
+    printf("Carta 2:\n");
     printf("Estado: %c\n", Estado2);
     printf("Codigo da carta: %c%s\n", Estado2, CodigoCarta2);
     printf("Nome da cidade: %s\n", NomeDaCidade2);
     printf("Populacao: %d\n", Populacao2);
     printf("Area: %.2f Km2\n", Area2); // 2 é o código unicode para o ²
-    printf("PIB: %.2f Bilhoes de reais\n", pib2);
+    printf("PIB: %.2lf Bilhoes de reais\n", pib2);
     printf("Pontos turisticos: %d\n", pontosTuristicos2);
 
     //ADICIONANDO PARADA PARA QUE O TERMINAL NÃO SE FECHE IMEDIATAMENTE APÓS A EXECUÇÃO DAS VARIAVEIS
