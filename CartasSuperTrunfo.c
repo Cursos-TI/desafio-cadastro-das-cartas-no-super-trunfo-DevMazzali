@@ -56,7 +56,7 @@ int main() {
     
         // Impressão dos dados da carta 1
 
-    printf("Carta 1:\n");
+    printf("Carta de numero 1:\n");
     printf("Estado: %c\n", Estado);
     printf("Codigo da carta: %c%s\n", Estado, CodigoCarta);
     printf("Nome da cidade: %s\n", NomeDaCidade);
@@ -98,7 +98,7 @@ int main() {
     
     // Impressão dos dados da carta 2
 
-    printf("Carta 2:\n");
+    printf("Carta de numero 2:\n");
     printf("Estado: %c\n", Estado2);
     printf("Codigo da carta: %c%s\n", Estado2, CodigoCarta2);
     printf("Nome da cidade: %s\n", NomeDaCidade2);
