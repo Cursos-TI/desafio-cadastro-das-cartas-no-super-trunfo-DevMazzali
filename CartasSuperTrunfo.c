@@ -1,3 +1,4 @@
+//Criado por Rafael Zulpo Mazzali
 #include <stdio.h>
 #include <string.h> //possibilita o uso da função strcspn que remove o \n da string
 
