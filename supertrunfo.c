@@ -85,11 +85,11 @@ int main() {
     while(getchar() != '\n');
     
     printf("Digite a Area em Km2:\n");
-    scanf("%lf", &Area2);
+    scanf("%f", &Area2);
     while(getchar() != '\n');
     
     printf("Digite o PIB:\n");
-    scanf("%f", &pib2);
+    scanf("%lf", &pib2);
     while(getchar() != '\n');
     
     printf("Digite a quantidade de pontos turisticos:\n");
@@ -103,7 +103,7 @@ int main() {
     printf("Codigo da carta: %c%s\n", Estado2, CodigoCarta2);
     printf("Nome da cidade: %s\n", NomeDaCidade2);
     printf("Populacao: %d\n", Populacao2);
-    printf("Area: %.2f Km2\n", Area2); // 2 é o código unicode para o ²
+    printf("Area: %.2f Km2\n", Area2); 
     printf("PIB: %.2lf Bilhoes de reais\n", pib2);
     printf("Pontos turisticos: %d\n", pontosTuristicos2);
 
