@@ -103,7 +103,7 @@ int main() {
     printf("Codigo da carta: %c%s\n", Estado2, CodigoCarta2);
     printf("Nome da cidade: %s\n", NomeDaCidade2);
     printf("Populacao: %d\n", Populacao2);
-    printf("Area: %.2f Km2\n", Area2); 
+    printf("Area: %.2f Km2\n", Area2); // 2 é o código unicode para o ²
     printf("PIB: %.2lf Bilhoes de reais\n", pib2);
     printf("Pontos turisticos: %d\n", pontosTuristicos2);
 
