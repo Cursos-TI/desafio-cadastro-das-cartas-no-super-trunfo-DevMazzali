@@ -146,7 +146,6 @@
         printf("Densidade populacional: %.2lf\n", DensidadePopulacional2);
         printf("PIB per capita: R$ %.2lf\n", PIBperCapita2);
         printf("Superpoder: %.2f\n", superpoder2);
-        getchar();
 
         printf("Comparando as cartas...\n");
         sleep(3);
