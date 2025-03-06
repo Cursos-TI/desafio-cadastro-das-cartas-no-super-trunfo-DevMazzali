@@ -151,39 +151,8 @@
         sleep(3);
 
         // Comparação entre as cartas       
-        if (populacao > populacao2)
-            printf("A população da Carta1 (%d) é maior que a da Carta2 (%d)\n", populacao, populacao2);
-        else
-            printf("A população da Carta2 (%d) é maior que a da Carta1 (%d)\n", populacao2, populacao);
-        
-        if (Area > Area2)
-            printf("A área da Carta1 (%.2f) é maior que a da Carta2 (%.2f)\n", Area, Area2);
-        else
-            printf("A área da Carta2 (%.2f) é maior que a da Carta1 (%.2f)\n", Area2, Area);
-
-        if (pib > pib2)
-            printf("O PIB da Carta1 (%.2lf) é maior que o da Carta2 (%.2lf)\n", pib, pib2);
-        else
-            printf("O PIB da Carta2 (%.2lf) é maior que o da Carta1 (%.2lf)\n", pib2, pib);
-
-        if (pontosTuristicos > pontosTuristicos2)
-            printf("A quantidade de pontos turísticos da Carta1 (%d) é maior que a da Carta2 (%d)\n", pontosTuristicos, pontosTuristicos2);
-        else
-            printf("A quantidade de pontos turísticos da Carta2 (%d) é maior que a da Carta1 (%d)\n", pontosTuristicos2, pontosTuristicos);
-
-        if (DensidadePopulacional > DensidadePopulacional2)
-            printf("A densidade populacional da Carta1 (%.2lf) é maior que a da Carta2 (%.2lf)\n", DensidadePopulacional, DensidadePopulacional2);
-        else
-            printf("A densidade populacional da Carta2 (%.2lf) é maior que a da Carta1 (%.2lf)\n", DensidadePopulacional2, DensidadePopulacional);
-
-        if (PIBperCapita > PIBperCapita2)
-            printf("O PIB per capita da Carta1 (%.2lf) é maior que o da Carta2 (%.2lf)\n", PIBperCapita, PIBperCapita2);
-        else
-            printf("O PIB per capita da Carta2 (%.2lf) é maior que o da Carta1 (%.2lf)\n", PIBperCapita2, PIBperCapita);
-
         if (superpoder > superpoder2)
-
-        printf("O superpoder da Carta1 (%.2f) é maior que o da Carta2 (%.2f)\n", superpoder, superpoder2);
+            printf("O superpoder da Carta1 (%.2f) é maior que o da Carta2 (%.2f)\n", superpoder, superpoder2);
         else
             printf("O superpoder da Carta 2 (%.2f) é maior que o da Carta1 (%.2f)\n", superpoder2, superpoder);
 
