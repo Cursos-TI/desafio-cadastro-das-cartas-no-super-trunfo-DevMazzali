@@ -146,12 +146,14 @@
         printf("Densidade populacional: %.2lf\n", DensidadePopulacional2);
         printf("PIB per capita: R$ %.2lf\n", PIBperCapita2);
         printf("Superpoder: %.2f\n", superpoder2);
+        getchar();
 
-        printf("Comparando as cartas...\n");
+        printf("Comparando as cartas...\n")
         sleep(3);
 
         // Comparação entre as cartas       
         if (superpoder > superpoder2)
+
             printf("O superpoder da Carta1 (%.2f) é maior que o da Carta2 (%.2f)\n", superpoder, superpoder2);
         else
             printf("O superpoder da Carta 2 (%.2f) é maior que o da Carta1 (%.2f)\n", superpoder2, superpoder);
