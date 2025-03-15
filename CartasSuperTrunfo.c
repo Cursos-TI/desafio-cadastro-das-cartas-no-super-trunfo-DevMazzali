@@ -22,36 +22,54 @@
         char Estado, Estado2;
         char CodigoCarta[4], CodigoCarta2[4];
         char NomeDaCidade[50], NomeDaCidade2[50];
-        int populacao, populacao2, pontosTuristicos, pontosTuristicos2, opcao;
+        int populacao, populacao2, pontosTuristicos, pontosTuristicos2, opcao_menu, opcao_atributo;
         float Area, Area2, superpoder, superpoder2;
-        double pib, pib2, DensidadePopulacional, DensidadePopulacional2, PIBperCapita, PIBperCapita2;
+        double pib, pib2, densidade_demografica, densidade_demografica2, PIBperCapita, PIBperCapita2;
 
         // Menu de opções
             printf("Menu Principal\n");
             printf("1 - Jogar\n");
             printf("2 - Regras do jogo\n");
             printf("3 - Sair\n");
-            scanf("%d", &opcao);
+            scanf("%d", &opcao_menu);
             while(getchar() != '\n');
 
-        switch (opcao) {
+        switch (opcao_menu) {
         case 1:
             printf("Iniciando o jogo...\n");
-            sleep(5);
+            sleep(3);
+
+        do {
+            printf("Escolha um atributo para comparar as cartas (Sera usado para determinar o vencedor):\n");
+            printf("1 - População\n");
+            printf("2 - Área\n");
+            printf("3 - PIB\n");
+            printf("4 - Pontos turísticos\n");
+            printf("5 - Densidade populacional\n");
+            printf("6 - PIB per capita\n");
+            scanf("%d", &opcao_atributo);
+            while(getchar() != '\n');
+
+            if (opcao_atributo < 1 || opcao_atributo > 6) {
+            printf("Opção inválida, porfavor escolha um número de 1 a 6\n");
+            }
+        } while (opcao_atributo <1 || opcao_atributo > 6); //Enquanto a opção for menor que 1 ou maior que 6, o loop continuará
             break;
+
         case 2:
             printf("Regras do jogo:\n");
             printf("O jogador deve escolher uma cidade para jogar.\n");
             printf("Os atributos das cartas devem ser preenchidos de acordo com valores reais da cidade escolhida\n");
             printf("O jogador que tiver o maior superpoder no final ganha a rodada\n");
             break;
+
         case 3:
             printf("Saindo do jogo...");
             return 0;
+
         default:
             printf("Opção inválida\n");
             return 1;
-            
             
         }
         
@@ -91,7 +109,7 @@
             return 1;
         }
 
-        DensidadePopulacional = populacao / Area;
+        densidade_demografica = populacao / Area;
         PIBperCapita = pib / populacao;
         double inverso_densidade = Area / populacao;
 
@@ -110,7 +128,7 @@
             printf("Area: %.2f Km²\n", Area);
             printf("PIB: R$ %.2lf Bilhões\n", pib);
             printf("Pontos turisticos: %d\n", pontosTuristicos);
-            printf("Densidade populacional: %.2lf\n", DensidadePopulacional);
+            printf("Densidade populacional: %.2lf\n", densidade_demografica);
             printf("PIB per capita: R$ %.2lf\n", PIBperCapita);
             printf("Superpoder: %.2f\n", superpoder);
         
@@ -150,7 +168,7 @@
             return 1;
         }
         
-        DensidadePopulacional2 = populacao2 / Area2;
+        densidade_demografica2 = populacao2 / Area2;
         PIBperCapita2 = pib2 / populacao2;
         double inverso_densidade2 = Area2 / populacao2;
         
@@ -168,21 +186,69 @@
             printf("Area: %.2f Km²\n", Area2);  
             printf("PIB: R$ %.2lf Bilhões\nA", pib2);
             printf("Pontos turisticos: %d\n", pontosTuristicos2);
-            printf("Densidade populacional: %.2lf\n", DensidadePopulacional2);
+            printf("Densidade populacional: %.2lf\n", densidade_demografica2);
             printf("PIB per capita: R$ %.2lf\n", PIBperCapita2);
             printf("Superpoder: %.2f\n", superpoder2);
-            getchar();
+            sleep (3);
 
             printf("Comparando as cartas...\n");
             sleep(3);
 
-        // Comparação entre as cartas       
-        if (superpoder > superpoder2)
-
-            printf("O superpoder da Carta1 (%.2f) é maior que o da Carta2 (%.2f)\n", superpoder, superpoder2);
-        else
-            printf("O superpoder da Carta 2 (%.2f) é maior que o da Carta1 (%.2f)\n", superpoder2, superpoder);
-
+        switch(opcao_atributo) {
+            case 1:
+            if (populacao > populacao2) {
+                printf("Carta 1 venceu!\n");
+            } else if (populacao < populacao2) {
+                printf("Carta 2 venceu!\n");
+            } else {
+                printf("Empate!!\n");
+            }
+            break;
+            case 2:
+            if (Area > Area2) {
+                printf("Carta 1 venceu!\n");
+            } else if (Area < Area2) {
+            } else {
+                printf("Empate!!\n");
+            }
+            break;
+            case 3:
+            if (pib > pib2) {
+                printf("Carta 1 venceu!\n");
+            } else if (pib < pib2) {
+                printf("Carta 2 venceu!\n");
+            } else {
+                printf("Empate!!\n");
+            }
+            break;
+            case 4:
+            if (pontosTuristicos > pontosTuristicos2) {
+                printf("Carta 1 venceu!\n");
+            } else if (pontosTuristicos < pontosTuristicos2) {
+                printf("Carta 2 venceu!\n");
+            } else {
+                printf("Empate!!\n");
+            }
+            break;
+            case 5:
+            if (densidade_demografica < densidade_demografica2) {
+                printf("Carta 1 venceu!\n");
+            } else if (densidade_demografica2 < densidade_demografica) {
+                printf("Carta 2 venceu!\n");
+            } else {
+                printf("Empate!!\n");
+            }
+            break;
+            case 6:
+            if (PIBperCapita > PIBperCapita2) {
+                printf("Carta 1 venceu!\n");
+            } else if (PIBperCapita < PIBperCapita2) {
+                printf("Carta 2 venceu!\n");
+            } else {
+                printf("Empate!!\n");
+            }
+            break;
+        }
         //ADICIONANDO PARADA PARA QUE O TERMINAL NÃO SE FECHE IMEDIATAMENTE APÓS A EXECUÇÃO DAS VARIAVEIS
             printf("Pressione qualquer tecla para sair...");
             getchar();
